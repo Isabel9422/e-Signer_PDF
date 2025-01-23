@@ -1,0 +1,42 @@
+.btn-delete{
+    border-radius: 20px;
+    size: 20%;
+}
+
+#iconDelete{
+    font-size: 8px;
+}
+
+.btn-files {
+    margin: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    transition: 0.5s;
+    color: white;            
+    border-radius: 10px;
+}
+
+.btn-files:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.item {
+  padding: 7px 7px;
+  cursor: move;
+}
+
+.form-description {
+  font-size: 16px;
+  color: #2a5d9e;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.form-description::after {
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, #2a5d9e, #72b4e9);
+  border-radius: 2px;
+}

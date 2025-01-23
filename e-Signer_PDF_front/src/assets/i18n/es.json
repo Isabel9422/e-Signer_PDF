@@ -1,0 +1,45 @@
+{
+  "card": {
+    "title": {
+      "split": "Recorta",
+      "merge": "Combina",
+      "sign": "Firma"
+    },
+    "description": {
+      "split": "Selecciona un rango de páginas de tu PDF y crea uno nuevo adaptado a tus necesidades.",
+      "merge": "Junta múltiples archivos PDF en uno solo de forma rápida y sencilla. Ideal para organizar tus documentos.",
+      "sign": "Agrega campos de firma digital a tus documentos para firmarlos o prepararlos para otros usuarios."
+    }
+  },
+  "button": {
+    "chooseFile": "Selecciona fichero",
+    "mergeFiles": "Unir archivos",
+    "splitFile": "Extraer páginas",
+    "signFile": "Agregar Firma",
+    "close": "Cerrar"
+  },
+  "languages": {
+    "title": "Idioma",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "error": {
+    "moreFilesThanExpected": "No puedes seleccionar mas de 5 archivos"
+  },
+  "label": {
+    "startPage": "Página de inicio",
+    "endPage": "Página final"
+  },
+  "form": {
+    "titleSign": "Selecciona cómo firmar tu PDF",
+    "titleSplit": "Selecciona cómo recortar tu PDF",
+    "titleMerge": "Selecciona cómo unir tus PDFs",
+    "descriptionMerge": "Arrastra los archivos y ordénalos en el orden en que quieras unirlos",
+    "positionSign": "Posición de la firma",
+    "allPages": "Todas las páginas",
+    "specificPage": "Página especifica",
+    "bottomLeft": "Abajo a la izquierda",
+    "bottomRight": "Abajo a la derecha",
+    "selectPages": "Selecciona las páginas"
+  }
+}

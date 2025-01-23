@@ -1,0 +1,24 @@
+button:hover {
+    background-color: #4995d0;
+}
+
+.dropdown-menu a:hover {
+    background-color: #4995d0;
+}
+
+.dropdown-menu a {
+  padding: auto;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: white;
+}
+
+.dropdown-menu {
+  background-color: #3f51b5;
+  cursor: pointer;
+}
+
+button {
+  border-radius: 10px !important;
+}

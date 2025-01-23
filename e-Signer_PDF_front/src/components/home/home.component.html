@@ -1,0 +1,33 @@
+<div class="m-5 d-flex justify-content-center">
+  <div class="card-columns d-flex justify-content-center">
+    <div class="card m-5" (click)="actionDocument('merge')">
+      <div class="image-box">
+        <img src="../assets/images/merge.svg" alt="mergeIcon" />
+      </div>
+      <div class="card-body">
+        <h3>{{ 'card.title.merge' | translate }}</h3>
+        <p class="card-text">{{ 'card.description.merge' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="card m-5" (click)="actionDocument('split')">
+      <div class="image-box">
+        <img src="../assets/images/split.svg" alt="splitIcon" />
+      </div>
+      <div class="card-body">
+        <h3>{{ 'card.title.split' | translate }}</h3>
+        <p class="card-text">{{ 'card.description.split' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="card m-5" (click)="actionDocument('sign')">
+      <div class="image-box">
+        <img src="../assets/images/sign.svg" alt="signIcon" />
+      </div>
+      <div class="card-body">
+        <h3>{{ 'card.title.sign' | translate }}</h3>
+        <p class="card-text">{{ 'card.description.sign' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</div>

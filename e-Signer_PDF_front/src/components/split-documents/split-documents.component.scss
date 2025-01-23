@@ -1,0 +1,37 @@
+.btn-files {
+  margin: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  transition: 0.5s;
+  color: white;            
+  border-radius: 10px;
+}
+
+.selectBox {
+  border-radius: 20px;
+}
+
+mat-form-field {
+  border-radius: 20px;
+  width: 70%;
+  font-size: 12px;
+  max-height: 10vh !important;
+}
+
+.btn-files:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.item {
+  padding: 17px 17px;
+}
+
+.splitFileButton{
+  margin-left: 35px;
+}
+
+.selectFileButton{
+  margin-right: 35px;
+}

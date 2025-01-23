@@ -1,0 +1,12 @@
+{
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+    "source.organizeImports":"always"
+    },
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSaveMode": "file",
+    "files.autoSave": "onFocusChange",
+    "vs-code-prettier-eslint.prettierLast": false,
+}  

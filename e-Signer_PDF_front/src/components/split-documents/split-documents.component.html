@@ -1,0 +1,71 @@
+<div class="m-5 d-flex justify-content-center align-content-center">
+  <div class="form-group">
+    <h2 class="form-title text-center">{{ 'form.titleSplit' | translate }}</h2>
+    <div class="list-files" *ngIf="fileToUpload != null">
+      <div class="box my-1">
+        <div class="item">
+          {{ fileToUpload.name }}
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-5 text-center d-flex justify-content-center align-content-center"
+      *ngIf="fileToUpload != null"
+    >
+      <div class="selectBox d-block">
+        <h2 class="form-title text-center">
+          {{ 'label.startPage' | translate }}
+        </h2>
+        <mat-form-field>
+          <mat-select [(value)]="startPage">
+            <mat-option
+              *ngFor="let number of numberPagesArray"
+              [value]="number"
+              >{{ number }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="selectBox d-block">
+        <h2 class="form-title text-center">
+          {{ 'label.endPage' | translate }}
+        </h2>
+        <mat-form-field>
+          <mat-select [(value)]="endPage">
+            <mat-option
+              *ngFor="let number of numberPagesArray"
+              [value]="number"
+              >{{ number }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div
+      class="buttonContainer d-flex justify-content-center align-content-center"
+    >
+      <button
+        for="file"
+        class="btn btn-files selectFileButton"
+        (click)="file.click()"
+      >
+        {{ 'button.chooseFile' | translate }}
+      </button>
+      <input
+        style="display: none"
+        type="file"
+        #file
+        (change)="handleFileInput($event.target)"
+        accept=".pdf"
+      />
+      <button
+        [disabled]="startPage > endPage"
+        *ngIf="fileToUpload != null"
+        class="btn btn-files splitFileButton"
+        (click)="splitFile()"
+      >
+        {{ 'button.splitFile' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

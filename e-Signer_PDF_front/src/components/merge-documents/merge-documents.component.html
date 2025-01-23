@@ -1,0 +1,58 @@
+<div class="m-5 d-flex justify-content-center align-content-center">
+  <div class="form-group">
+    <div style="width: 400px">
+      <h2 class="form-title text-center">
+        {{ 'form.titleMerge' | translate }}
+      </h2>
+      <p class="form-description text-center">
+        {{ 'form.descriptionMerge' | translate }}
+      </p>
+    </div>
+    <div
+      class="list-files my-3"
+      *ngIf="filesToUpload != null && filesToUpload.length > 0"
+      cdkDropList
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="box my-1" *ngFor="let file of filesToUpload" cdkDrag>
+        <div class="item">
+          {{ file.name }}
+          <button
+            mat-mini-fab
+            class="btn btn-danger btn-delete m-0"
+            (click)="deleteItem(file)"
+          >
+            <mat-icon #iconDelete>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="buttonContainer d-flex justify-content-center align-content-center"
+    >
+      <button
+        for="file"
+        class="btn btn-files"
+        (click)="file.click()"
+        [disabled]="filesToUpload != null && filesToUpload.length >= 5"
+      >
+        {{ 'button.chooseFile' | translate }}
+      </button>
+      <input
+        style="display: none"
+        type="file"
+        #file
+        (change)="handleFileInput($event.target)"
+        accept=".pdf"
+        multiple
+      />
+      <button
+        *ngIf="filesToUpload != null && filesToUpload.length > 0"
+        class="btn btn-files mx-5"
+        (click)="mergeFiles()"
+      >
+        {{ 'button.mergeFiles' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

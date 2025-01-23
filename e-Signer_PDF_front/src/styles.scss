@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: -webkit-linear-gradient(175deg, #4995d0,#8fc6f0,#ffffff);
+    background: linear-gradient(175deg, #4995d0,#8fc6f0,#ffffff);
+}
+
+.list-files {
+  width: 400px;
+  max-width: 100%;
+  min-height: 60px;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.item {
+  border-bottom: solid 1px azure;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: azure;
+  font-size: 12px;
+}
+
+.cdk-drag-preview {
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.item:last-child {
+  border: none;
+}
+
+.list-files .cdk-drop-list-dragging .item:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.btn-files {
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    display: block;
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2a5d9e;
+  letter-spacing: 1.5px;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2a5d9e, #72b4e9);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

@@ -1,0 +1,45 @@
+{
+  "card": {
+    "title": {
+      "split": "Split",
+      "merge": "Merge",
+      "sign": "Sign"
+    },
+    "description": {
+      "split": "Select a range of pages from your PDF and create a new one tailored to your needs.",
+      "merge": "Combine multiple PDF files into a single document quickly and easily. Perfect for organizing your files.",
+      "sign": "Add digital signature fields to your documents to sign them or prepare them for other users."
+    }
+  },
+  "button": {
+    "chooseFile": "Choose File",
+    "mergeFiles": "Merge Files",
+    "splitFile": "Extract pages",
+    "signFile": "Add signature",
+    "close": "Close"
+  },
+  "languages": {
+    "title": "Language",
+    "en": "English",
+    "es": "Spanish"
+  },
+  "error": {
+    "moreFilesThanExpected": "You cannot select more than 5 files"
+  },
+  "label": {
+    "startPage": "Start Page",
+    "endPage": "End Page"
+  },
+  "form": {
+    "titleSign": "Select how to sign your PDF",
+    "titleSplit": "Select how to split your PDF",
+    "titleMerge": "Select how to merge your PDFs",
+    "descriptionMerge": "Drag the files and arrange them in the order you want to merge them.",
+    "positionSign": "Position of the signature",
+    "allPages": "All pages",
+    "specificPage": "A specific page",
+    "bottomLeft": "Bottom left",
+    "bottomRight": "Bottom right",
+    "selectPages": "Choose Pages"
+  }
+}

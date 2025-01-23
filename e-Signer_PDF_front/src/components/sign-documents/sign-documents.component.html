@@ -1,0 +1,74 @@
+<div class="m-5 d-flex justify-content-center align-content-center">
+  <div class="form-group">
+    <h2 class="form-title text-center">{{ 'form.titleSign' | translate }}</h2>
+    <div class="list-files my-3" *ngIf="fileToUpload != null">
+      <div class="box my-1">
+        <div class="item">
+          {{ fileToUpload.name }}
+        </div>
+      </div>
+    </div>
+
+    <div class="signature-form" *ngIf="fileToUpload != null">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'form.selectPages' | translate }}</mat-label>
+        <mat-select [(value)]="pageSelection" required="true">
+          <mat-option value="all">{{ 'form.allPages' | translate }}</mat-option>
+          <mat-option value="specific">{{
+            'form.specificPage' | translate
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div *ngIf="pageSelection === 'specific'">
+        <mat-form-field>
+          <mat-select [(value)]="pageSelected" required="true">
+            <mat-option
+              *ngFor="let number of numberPagesArray"
+              [value]="number"
+              >{{ number }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'form.positionSign' | translate }}</mat-label>
+        <mat-select [(value)]="position" required="true">
+          <mat-option value="bottomLeft">{{
+            'form.bottomLeft' | translate
+          }}</mat-option>
+          <mat-option value="bottomRight">{{
+            'form.bottomRight' | translate
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div
+      class="buttonContainer d-flex justify-content-center align-content-center"
+    >
+      <button for="file" class="btn btn-files" (click)="file.click()">
+        {{ 'button.chooseFile' | translate }}
+      </button>
+      <input
+        style="display: none"
+        type="file"
+        #file
+        (change)="handleFileInput($event.target)"
+        accept=".pdf"
+      />
+      <button
+        [disabled]="
+          (position || pageSelection) == null ||
+          (pageSelection == 'specific' && pageSelected == null)
+        "
+        *ngIf="fileToUpload != null"
+        class="btn btn-files mx-5"
+        (click)="signFile()"
+      >
+        {{ 'button.signFile' | translate }}
+      </button>
+    </div>
+  </div>
+</div>
